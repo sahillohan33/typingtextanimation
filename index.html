@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Typing Text Animation</title>
+    <!-- Adding CSS File  -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Adding Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <span class="text first-text">I'm a</span>
+        <span class="text sec-text">Freelancer</span>
+    </div>
+    <script>
+        const text=document.querySelector(".sec-text");
+        const textLoad=()=>{
+            setTimeout(()=>{
+                text.textContent="Freelancer"
+            },0);
+            setTimeout(()=>{
+                text.textContent="Blogger"
+            },4000);
+            setTimeout(()=>{
+                text.textContent="YouTuber"
+            },8000); // 1s =1000 milliseconds
+        }
+        textLoad();
+        setInterval(textLoad,12000);
+    </script>
+</body>
+</html>
